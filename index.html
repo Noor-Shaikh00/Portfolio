@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Noor Shaikh Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Noor Shaikh</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#" onclick="openModal('about')">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#" onclick="openModal('skills')">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#" onclick="openModal('services')">Services</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="#" id="openBlogs" onclick="openModal('blogs')">Blogs</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="mailto:developernoorshaikh00">Contact Us</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="">Home</a>
+                <a href="#" onclick="openModal('about')">About</a>
+                <a href="#" onclick="openModal('skills')">Skills</a>
+                <a href="#" onclick="openModal('services')">Services</a>
+                <a href="#" id="openBlogs" onclick="openModal('blogs')">Blogs</a>
+                <a href="mailto: developernoorshaikh00">Contact Us</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+        <section>
+            <div class="main-container">
+                <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                    <img src="girl-pic.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Noor Shaikh</span></h1>
+                    <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">I'm a <span></span></div>
+                    <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000"> Hi! I'm Noor Shaikh,a matric student from Karachi, studying at Ambitions Grammar School. Passionate about coding, designing and problem-solving, I'm on a continuous journey of learning and growing in the tech field. </p>
+                    <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+                        <a href="https://github.com/Noor-Shaikh00?tab=repositories" ><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.tiktok.com/@accountnotfound0_69?_t=ZS-8tsXRDPwAEL&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.linkedin.com/in/abdul-majeed-shaikh-904aa6278/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://youtube.com/@bestearningapps177?si=ZPihfH0Hhx2ie7b7"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
+                        <a href="file:///C:/Users/hp/Downloads/Resume%20(1).pdf" download="My_Resume.pdf">
+                        <button>Download CV</button>
+                        </a>
+                    <div>
+                </div>
+            </div>
+        </section>
+        <div id="about-modal" class="modal">
+            <div class="modal-content">
+                <h2>About Me</h2>
+                <p>Hi, I'm <b>Noor Shaikh</b>, a matric student from Karachi, studying at Ambitions Grammar School. Passionate about coding and web development, I have experience in building websites using Next.js, HTML, CSS, and JavaScript. I have developed multiple projects, including a coffee website using HTML, CSS, and JavaScript, as well as a personal blog website built with Next.js. Constantly exploring new technologies, I aim to refine my skills and create impactful digital experiences." </p>
+                <button class="close-btn" onclick="closeModal('about')">Close</button>
+            </div>
+        </div>
+    
+        <div id="skills-modal" class="modal">
+            <div class="modal-content">
+                <h2>Skills</h2>
+                <p>My skillset includes HTML, CSS, JavaScript, Python , Next.Js and more!</p>
+                <button class="close-btn" onclick="closeModal('skills')">Close</button>
+            </div>
+        </div>
+    
+        <div id="services-modal" class="modal">
+            <div class="modal-content">
+                <h2>Services</h2>
+                <p>I provide services like website development, UI design, and basic application development.</p>
+                <button class="close-btn" onclick="closeModal('services')">Close</button>
+            </div>
+        </div>
+    
+        
+        <div id="blogs-modal" class="modal">
+            <div class="modal-content">
+                <h2>My Blogs</h2>
+                
+                <div class="blog-container">
+                    <div class="blog-post">
+                        <h3>1: Why I Chose Computer Science as My Career Path</h3>
+                        <p> <b style="color: black;">Introduction:</b><br>
+                            Since childhood, I've been fascinated by how technology simplifies complex tasks. My curiosity about how apps, games, and websites function led me to choose Computer Science as my career.
+                            
+                            <br><b style="color: black;">My Journey:</b><br>
+                            "Writing my first 'Hello World!' program introduced me to the vast potential of coding. Over time, I developed projects like a stopwatch and an employee management system using Java, Python, and JavaScript. These projects not only tested my technical skills but also fueled my passion for solving real-world problems through code."
+                            
+                            <br><b style="color: black;">The Future:</b><br>
+                            As I continue learning and growing, I aim to build innovative software solutions that make a global impact. Computer Science has become more than a career—it's a platform for continuous growth and creativity.</p>
+                    </div>
+                    <div class="blog-post">
+                        <h3>2: Top 5 Skills Every Aspiring Developer Should Learn</h3>
+                        <p>Being a developer requires more than just knowing how to code. Here are the top skills I believe every developer should master:
+
+                            <br><b style="color: black;">Problem-Solving</b><br>
+                            "Problem-solving is at the core of programming. Tackling challenges in JavaScript, Python, and C++ has improved my ability to think analytically, debug effectively, and develop efficient solutions."
+                            
+                            <br><b style="color: black;">Web Development</b><br>
+                            "Building websites, including my portfolio and interactive projects, using HTML, CSS, and JavaScript has enhanced my understanding of user-friendly design and responsive web development."
+                            
+                            <br><b style="color: black;">Database Management</b><br>
+                            "Handling and structuring data is essential in software development. Working with Python, Java, and modern web technologies like Next.js has helped me manage data efficiently in real-world applications."
+                            
+                            <br><b style="color: black;">Version Control (Git)</b><br>
+                            "Using Git and GitHub has helped me manage my code efficiently, work on team projects, and build a strong foundation in software development."
+                            <br><b style="color: black;">Communication</b><br>
+                            "Coding isn't just about writing code—it's also about sharing knowledge. Working on IT projects has strengthened my teamwork, problem-solving, and communication skills."
+                        </p>
+                    </div>
+                  
+                  
+                    <button class="close-btn" onclick="closeModal('blogs')">Close</button>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({offset:0});
+        </script>
+        <script>
+            function hamburg(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
+            }
+            function cancel(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(-500px)"
+            }
+            
+            function openModal(section) {
+            document.getElementById(`${section}-modal`).style.display = 'flex';
+            }
+
+            
+            function closeModal(section) {
+            document.getElementById(`${section}-modal`).style.display = 'none';
+            }
+            
+            document.getElementById('openBlogs').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('blogs-modal').style.display = 'flex';
+            });
+
+           
+            function closeModal(section) {
+            document.getElementById('blogs-modal').style.display = 'none';
+            }
+            window.onclick = function (event) {
+            const modal = document.getElementById('blogs-modal');
+            if (event.target === modal) {
+            modal.style.display = 'none';
+            }
+            };
+            
+            function closeModal(section) {
+            document.getElementById(`${section}-modal`).style.display = 'none';
+            }
+        </script>
+</body>
+</html>
